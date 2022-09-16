@@ -28,3 +28,7 @@
       };
 ```
 - RUN `rs.initiate(config);`
+
+
+## TODO
+- Automate replica primary/secondary integration setup
