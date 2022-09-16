@@ -1,0 +1,39 @@
+version: '3'
+
+services:
+
+  # Primary
+  mongo1:
+    hostname: mongo1
+    container_name: mongo1
+    image: mongo
+    expose:
+      - 27017
+    ports:
+      - 30001:27017 
+    restart: always
+    command: mongod --replSet my-mongo-set
+    
+  # Secondary
+  mongo2:
+    hostname: mongo2
+    container_name: mongo2
+    image: mongo
+    expose:
+      - 27017
+    ports:
+      - 30002:27017
+    restart: always
+    command: mongod --replSet my-mongo-set
+
+  # Secondary
+  mongo3:
+    hostname: mongo3
+    container_name: mongo3
+    image: mongo
+    expose:
+      - 27017
+    ports:
+      - 30003:27017
+    restart: always
+    command: mongod --replSet my-mongo-set
