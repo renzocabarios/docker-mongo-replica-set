@@ -13,6 +13,8 @@ services:
       - 30001:27017 
     restart: always
     command: mongod --replSet my-mongo-set
+    networks:
+      - my-mongo-cluster
     
   # Secondary
   mongo2:
@@ -25,6 +27,8 @@ services:
       - 30002:27017
     restart: always
     command: mongod --replSet my-mongo-set
+    networks:
+      - my-mongo-cluster
 
   # Secondary
   mongo3:
@@ -37,3 +41,9 @@ services:
       - 30003:27017
     restart: always
     command: mongod --replSet my-mongo-set
+    networks:
+      - my-mongo-cluster
+
+
+networks:
+  my-mongo-cluster:
