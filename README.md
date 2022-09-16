@@ -30,5 +30,8 @@
 - RUN `rs.initiate(config);`
 
 
+## INFO
+- connection string to primary `mongodb://localhost:30001/?directConnection=true`
+
 ## TODO
 - Automate replica primary/secondary integration setup
