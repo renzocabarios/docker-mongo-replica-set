@@ -7,7 +7,8 @@
 - RUN `docker-compose up -d`
 - OPEN MAIN MONGO INSIDE DOCKER BY RUNNING `docker exec -it mongo1 mongo`
 - OPEN PRIMARY MONGO INSIDE DOCKER BY RUNNING `docker exec -it mongo1 mongo`
-- RUN ```javascript
+- RUN 
+```javascript
     config = {
       "_id" : "my-mongo-set",
       "members" : [
