@@ -31,7 +31,7 @@
 
 
 ## INFO
-- connection string to primary `mongodb://localhost:30001/?directConnection=true`
+- connection string to primary `mongodb://localhost:27017/?directConnection=true`
 
 ## TODO
 - Automate replica primary/secondary integration setup
